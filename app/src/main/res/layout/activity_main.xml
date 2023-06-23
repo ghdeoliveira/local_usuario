@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:mapType="normal"
+        map:uiScrollGestures="true"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true" >
+
+        <ImageButton
+            android:id="@+id/ic_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="970px"
+            android:layout_marginTop="20px"
+            android:clickable="true"
+            android:onClick="onImageViewClicked"
+            android:padding="10px"
+
+            android:background="@drawable/bkg_radio_btn"
+            android:src="@drawable/my_location"
+             />
+
+        <RadioGroup
+            android:background="@drawable/bkg_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:orientation="vertical"
+            android:gravity="start">
+            <RadioButton
+                android:id="@+id/radio_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mapa"
+                android:buttonTint="#4A4A4A"
+                android:textColor="#4A4A4A"
+                android:checked="true"
+                android:layout_marginRight="20px"
+                android:onClick="onRadioButtonClicked" />
+            <RadioButton
+                android:id="@+id/radio_satelite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30px"
+                android:text="Satélite"
+                android:buttonTint="#4A4A4A"
+                android:textColor="#4A4A4A"
+                android:onClick="onRadioButtonClicked" />
+        </RadioGroup>
+
+    </fragment>
+
+</FrameLayout>
